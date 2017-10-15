@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30.843983mm"
+   height="47.817581mm"
+   viewBox="0 0 30.843983 47.817581"
+   version="1.1"
+   id="svg4673"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="gravestone.svg"
+   inkscape:export-filename="/home/kyle/Documents/Halloween/sprites/gravestone.png"
+   inkscape:export-xdpi="33.995865"
+   inkscape:export-ydpi="33.995865">
+  <defs
+     id="defs4667" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="-44.230238"
+     inkscape:cy="134.22373"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4670">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.329188,-99.068886)">
+    <path
+       style="fill:#808080;stroke:#000000;stroke-width:0.22921661px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 45.649865,99.183494 c -3.470703,0 -5.206069,7.401276 -5.206069,12.032496 v 35.55087 l -0.09922,0.005 h 15.4066 15.406987 l -0.0996,-0.005 v -35.55087 c 0,-4.63122 -1.735365,-12.032496 -5.206069,-12.032496 H 55.751181 Z"
+       id="path4677"
+       inkscape:connector-curvature="0" />
+    <g
+       aria-label="RIP"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text4684"
+       transform="translate(0.811897,4.2333335)">
+      <path
+         d="m 50.86718,109.62952 q 0.335897,0.11369 0.651123,0.48576 0.320394,0.37207 0.640787,1.02319 l 1.059367,2.1084 h -1.121378 l -0.98702,-1.97921 q -0.382406,-0.77514 -0.744141,-1.02836 -0.356567,-0.25321 -0.976684,-0.25321 h -1.136882 v 3.26078 h -1.043864 v -7.71529 h 2.356446 q 1.322916,0 1.974039,0.55294 0.651123,0.55294 0.651123,1.66915 0,0.72864 -0.341064,1.20923 -0.335897,0.48059 -0.981852,0.66662 z m -2.614828,-3.24011 v 2.73885 h 1.312582 q 0.754476,0 1.136881,-0.34623 0.387573,-0.3514 0.387573,-1.02836 0,-0.67696 -0.387573,-1.01803 -0.382405,-0.34623 -1.136881,-0.34623 z"
+         style="stroke-width:0.26458332"
+         id="path4686"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 54.567212,105.53158 h 1.043864 v 7.71529 h -1.043864 z"
+         style="stroke-width:0.26458332"
+         id="path4688"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 58.732333,106.38941 v 2.89905 h 1.312581 q 0.728638,0 1.126546,-0.37724 0.397909,-0.37724 0.397909,-1.07487 0,-0.69246 -0.397909,-1.0697 -0.397908,-0.37724 -1.126546,-0.37724 z m -1.043864,-0.85783 h 2.356445 q 1.297079,0 1.958537,0.58911 0.666626,0.58395 0.666626,1.71566 0,1.14205 -0.666626,1.72599 -0.661458,0.58395 -1.958537,0.58395 h -1.312581 v 3.10058 h -1.043864 z"
+         style="stroke-width:0.26458332"
+         id="path4690"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

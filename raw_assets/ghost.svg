@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="92.299446mm"
+   height="170.94296mm"
+   viewBox="0 0 92.299446 170.94296"
+   version="1.1"
+   id="svg4718"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="ghost.svg"
+   inkscape:export-filename="/home/kyle/Documents/Halloween/sprites/ghost.png"
+   inkscape:export-xdpi="9.5096054"
+   inkscape:export-ydpi="9.5096054">
+  <defs
+     id="defs4712" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-905.15722"
+     inkscape:cy="735.72766"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4715">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.459175,-61.896028)">
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.86608511px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 300.09647,234.3716 c -7.21486,0.0547 -47.70568,19.80931 -64.13163,38.58738 -28.93374,33.07693 -43.30703,76.0163 -52.33789,121.00391 -1.74431,8.68937 -3.13756,18.34454 -4.24023,28.66797 -4.21879,-5.84911 -21.04708,-28.0285 -34.5957,-29.22266 -7.44369,-0.65605 -16.06382,4.68716 -19.28516,11.42969 -5.70463,11.94028 -0.11373,27.40391 5.71289,39.28516 8.72938,17.80034 38.64813,41.89223 44.68555,46.64257 -0.89444,84.25801 2.84196,142.94361 7.72265,174.79297 11.02242,71.92782 49.27075,148.18297 32.80134,213.34786 29.15381,-22.66787 70.42275,-100.20574 106.74384,-149.50371 22.29202,-30.25657 53.1692,-55.32652 68.22334,-89.76149 20.73551,-47.43055 28.16743,-67.55764 26.94242,-152.94008 6.15848,-4.84889 35.9482,-28.87022 44.65234,-46.61914 5.8266,-11.88125 11.41756,-27.34487 5.71289,-39.28515 -3.22132,-6.74253 -11.84149,-12.08574 -19.28515,-11.42969 -14.05705,1.23896 -31.54927,24.92933 -34.91797,29.66797 -1.0352,-8.97124 -2.29972,-17.40007 -3.83984,-25.07227 C 401.62932,348.97528 386.52623,306.65903 358.32031,272.95898 343.37643,255.10424 320.61,234.22129 300.09647,234.3716 Z"
+       transform="scale(0.26458333)"
+       id="path4720"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="casccsscscaacscccsac" />
+    <g
+       id="g4731"
+       transform="translate(2.5515194,-8.8824405)">
+      <circle
+         r="5.3861609"
+         cy="98.090027"
+         cx="63.027527"
+         id="path4725"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4727"
+         cx="89.107887"
+         cy="98.090027"
+         r="5.3861609" />
+    </g>
+    <ellipse
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4733"
+       cx="78.619225"
+       cy="110.65774"
+       rx="15.497024"
+       ry="5.4806542" />
+  </g>
+</svg>
