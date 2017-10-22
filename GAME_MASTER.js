@@ -16,7 +16,13 @@ var GAME_MASTER = {
     game_board: {
         x: new ValueRange(-extraFOV, WIDTH + extraFOV),
         y: new ValueRange(-extraFOV, HEIGHT + extraFOV),
-        grid_size: 32
+        grid_size: 32,
+        background_color: "black"
+    },
+    background_text: {
+        color: "rgba(255, 255, 255, 0.5)",
+        font: "48px serif",
+        text: "HAPPY HALLOWEEN!"
     },
     entity_spawn_rate: 0.5,
     song: "audio/ghostbusters.mp3",

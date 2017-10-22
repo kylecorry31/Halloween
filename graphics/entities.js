@@ -149,10 +149,18 @@ var Field = function() {
 
 
     this.draw = function(ctx) {
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = GAME_MASTER.game_board.background_color;
         var x = GAME_MASTER.game_board.x;
         var y = GAME_MASTER.game_board.y;
         ctx.fillRect(x.min, y.min, x.max - x.min, y.max - y.min);
+
+        if (GAME_MASTER.background_text != undefined) {
+            ctx.fillStyle = GAME_MASTER.background_text.color;
+            ctx.textAlign = "center";
+            ctx.font = GAME_MASTER.background_text.font;
+            ctx.fillText(GAME_MASTER.background_text.text, (x.max - x.min) / 2.0, (y.max - y.min) / 2.0);
+        }
+
         this.entities.map(function(row) {
             row.map(function(entity) {
                 if (entity != undefined) {
