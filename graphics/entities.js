@@ -105,19 +105,24 @@ var Entity = function(x, y, entity_info) {
     this.currentImage = normalSprite;
     this.size = entity_info.size + 2 * (Math.random() - 0.5) * entity_info.size_std_dev;
 
+    this.width = this.size * (entity_info.aspect_ratio < 1 ? entity_info.aspect_ratio: 1);
+    this.height = this.size * (entity_info.aspect_ratio > 1 ? 1.0 / entity_info.aspect_ratio: 1);
+
     this.x = x;
     this.y = y;
 
     // compute center
     var gridSize = GAME_MASTER.game_board.grid_size;
-    var sizeDiff = gridSize - this.size;
-    this.x += sizeDiff / 2.0;
-    this.y += sizeDiff / 2.0;
+    this.x += (gridSize - this.width) / 2.0;
+    this.y += (gridSize - this.height) / 2.0;
 
 
 
     this.draw = function(ctx) {
-        ctx.drawImage(this.currentImage, this.x, this.y, this.size, this.size);
+
+        
+
+        ctx.drawImage(this.currentImage, this.x, this.y, this.width, this.height);
     };
 
     this.setSpecialActivation = function(activationFactor) {

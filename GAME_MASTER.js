@@ -11,6 +11,7 @@ var MOVEMENT_STATIONARY = "STATIONARY";
 var MOVEMENT_BOUNCE = "BOUNCE";
 var MOVEMENT_WRAP = "WRAP";
 
+// Aspect ratio = width / height
 
 var GAME_MASTER = {
     game_board: {
@@ -37,6 +38,7 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/pumpkin.png",
         special_sprite: "sprites/pumpkin.png",
+        aspect_ratio: 1.05,
         movement_type: MOVEMENT_STATIONARY
     }, {
         name: "JACK O'LANTERN",
@@ -46,6 +48,7 @@ var GAME_MASTER = {
         special_activation_rate: 0.5,
         normal_sprite: "sprites/jackolantern-off.png",
         special_sprite: "sprites/jackolantern-on.png",
+        aspect_ratio: 1.05,
         movement_type: MOVEMENT_STATIONARY
     }, {
         name: "TOMBSTONE",
@@ -55,6 +58,7 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/gravestone.png",
         special_sprite: "sprites/gravestone.png",
+        aspect_ratio: 0.8,
         movement_type: MOVEMENT_STATIONARY
     }, {
         name: "BOUNCING GHOST",
@@ -64,6 +68,7 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/ghost.png",
         special_sprite: "sprites/ghost.png",
+        aspect_ratio: 0.8,
         x_left_movement_modifier: 2,
         y_up_movement_modifier: 2,
         x_right_movement_modifier: 2,
@@ -78,6 +83,7 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/ghost.png",
         special_sprite: "sprites/ghost.png",
+        aspect_ratio: 0.8,
         x_left_movement_modifier: 2,
         y_up_movement_modifier: 2,
         x_right_movement_modifier: 2,
@@ -92,6 +98,7 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/leaf.png",
         special_sprite: "sprites/leaf.png",
+        aspect_ratio: 1,
         x_left_movement_modifier: 2,
         y_up_movement_modifier: 0,
         x_right_movement_modifier: 2,
