@@ -26,6 +26,9 @@ var GAME_MASTER = {
     },
     entity_spawn_rate: 0.5,
     song: "audio/ghostbusters.mp3",
+    song_analysis: {
+        output_bins: 10 
+    },
     entities: [{
         name: "PUMPKIN",
         spawn_rate: 0.25,

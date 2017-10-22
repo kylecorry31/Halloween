@@ -11,8 +11,8 @@ var BouncingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        var motionX = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
-        var motionY = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionX = (Math.random() + 0.3) / 1.3 * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionY = (Math.random() + 0.3) / 1.3 * (activationFactor - 0.5) * 2 * this.entity.size;
 
         if(motionX < 0){
           motionX *= entity_info.x_left_movement_modifier;
@@ -66,8 +66,8 @@ var WrappingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        var motionX = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
-        var motionY = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionX = (Math.random() + 0.3) / 1.3 * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionY = (Math.random() + 0.3) / 1.3 * (activationFactor - 0.5) * 2 * this.entity.size;
 
         if(motionX < 0){
           motionX *= entity_info.x_left_movement_modifier;
