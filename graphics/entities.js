@@ -11,8 +11,23 @@ var BouncingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        this.x_speed = this.x_speed * 0.5 + Math.random() * (activationFactor - 0.5) * 2 * entity_info.x_movement_modifier * this.entity.size;
-        this.y_speed = this.y_speed * 0.5 + Math.random() * (activationFactor - 0.5) * 2 * entity_info.y_movement_modifier * this.entity.size;
+        var motionX = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionY = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+
+        if(motionX < 0){
+          motionX *= entity_info.x_left_movement_modifier;
+        } else {
+          motionX *= entity_info.x_right_movement_modifier;
+        }
+
+        if(motionY < 0){
+          motionY *= entity_info.y_up_movement_modifier;
+        } else {
+          motionY *= entity_info.y_down_movement_modifier;
+        }
+
+        this.x_speed = this.x_speed * 0.5 + motionX;
+        this.y_speed = this.y_speed * 0.5 + motionY;
         this.entity.setSpecialActivation(activationFactor);
     };
 
@@ -51,8 +66,23 @@ var WrappingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        this.x_speed = this.x_speed * 0.5 + Math.random() * (activationFactor - 0.5) * 2 * entity_info.x_movement_modifier * this.entity.size;
-        this.y_speed = this.y_speed * 0.5 + Math.random() * (activationFactor - 0.5) * 2 * entity_info.y_movement_modifier * this.entity.size;
+        var motionX = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionY = Math.random() * (activationFactor - 0.5) * 2 * this.entity.size;
+
+        if(motionX < 0){
+          motionX *= entity_info.x_left_movement_modifier;
+        } else {
+          motionX *= entity_info.x_right_movement_modifier;
+        }
+
+        if(motionY < 0){
+          motionY *= entity_info.y_up_movement_modifier;
+        } else {
+          motionY *= entity_info.y_down_movement_modifier;
+        }
+
+        this.x_speed = this.x_speed * 0.5 + motionX;
+        this.y_speed = this.y_speed * 0.5 + motionY;
         this.entity.setSpecialActivation(activationFactor);
     };
 

@@ -48,7 +48,7 @@ var GAME_MASTER = {
         name: "TOMBSTONE",
         spawn_rate: 0.1,
         size: 22,
-        size_std_dev: 4,
+        size_std_dev: 5,
         special_activation_rate: 0,
         normal_sprite: "sprites/gravestone.png",
         special_sprite: "sprites/gravestone.png",
@@ -61,8 +61,10 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/ghost.png",
         special_sprite: "sprites/ghost.png",
-        x_movement_modifier: 2,
-        y_movement_modifier: 2,
+        x_left_movement_modifier: 2,
+        y_up_movement_modifier: 2,
+        x_right_movement_modifier: 2,
+        y_down_movement_modifier: 2,
         movement_type: MOVEMENT_BOUNCE
     }, {
         name: "WRAPPING GHOST",
@@ -72,8 +74,23 @@ var GAME_MASTER = {
         special_activation_rate: 0,
         normal_sprite: "sprites/ghost.png",
         special_sprite: "sprites/ghost.png",
-        x_movement_modifier: 2,
-        y_movement_modifier: 2,
+        x_left_movement_modifier: 2,
+        y_up_movement_modifier: 2,
+        x_right_movement_modifier: 2,
+        y_down_movement_modifier: 2,
+        movement_type: MOVEMENT_WRAP
+    }, {
+        name: "LEAF 1",
+        spawn_rate: 0,
+        size: 10,
+        size_std_dev: 4,
+        special_activation_rate: 0,
+        normal_sprite: "sprites/leaf.png",
+        special_sprite: "sprites/leaf.png",
+        x_left_movement_modifier: 2,
+        y_up_movement_modifier: 0,
+        x_right_movement_modifier: 2,
+        y_down_movement_modifier: 10,
         movement_type: MOVEMENT_WRAP
     }]
 };
