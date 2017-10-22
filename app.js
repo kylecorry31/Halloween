@@ -1,4 +1,4 @@
-var pumpkinPatch;
+var scene;
 
 function main() {
   var game = new Game(init, draw);
@@ -7,11 +7,11 @@ function main() {
 
 
 function init() {
-  pumpkinPatch = new PumpkinPatch();
+  scene = new Scene();
 }
 
 function draw() {
-  pumpkinPatch.draw(ctx);
+  scene.draw(ctx);
 }
 
 main();

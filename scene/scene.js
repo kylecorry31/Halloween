@@ -1,9 +1,9 @@
-var PumpkinPatch = function() {
+var Scene = function() {
     this.song = new Audio(GAME_MASTER.song, new NetworkManager());
     this.field = new Field();
 };
 
-PumpkinPatch.prototype._reactToSong = function() {
+Scene.prototype._reactToSong = function() {
     if (this.song.analyser !== undefined) {
         this.song.analyser.getByteTimeDomainData(this.song.dataArray);
         var songBins = [];
@@ -28,7 +28,7 @@ PumpkinPatch.prototype._reactToSong = function() {
     }
 };
 
-PumpkinPatch.prototype.draw = function(ctx) {
+Scene.prototype.draw = function(ctx) {
     this._reactToSong();
     this.field.draw(ctx);
 };
