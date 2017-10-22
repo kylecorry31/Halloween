@@ -89,17 +89,8 @@ var WrappingEntity = function(x, y, entity_info) {
     this._wrap = function() {
         var x = GAME_MASTER.game_board.x;
         var y = GAME_MASTER.game_board.y;
-        if (this.entity.x < x.min) {
-            this.entity.x = x.max;
-        } else if (this.entity.x > x.max) {
-            this.entity.x = x.min;
-        }
-
-        if (this.entity.y < y.min) {
-            this.entity.y = y.max;
-        } else if (this.entity.y > y.max) {
-            this.entity.y = y.min;
-        }
+        this.entity.x = wrap(this.entity.x, x.min, x.max);
+        this.entity.y = wrap(this.entity.y, y.min, y.max);
     }
 
 }
@@ -157,6 +148,8 @@ var Field = function() {
                     entityIndex++;
                     entityRateSum += entityTypes[entityIndex].spawn_rate;
                 }
+
+                // Handle movement types
                 var movement_type = entityTypes[entityIndex].movement_type;
 
                 if (movement_type == MOVEMENT_STATIONARY) {
