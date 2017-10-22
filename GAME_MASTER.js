@@ -68,6 +68,7 @@ var GAME_MASTER = {
         y_up_movement_modifier: 2,
         x_right_movement_modifier: 2,
         y_down_movement_modifier: 2,
+        movement_smoothing: 5,
         movement_type: MOVEMENT_BOUNCE
     }, {
         name: "WRAPPING GHOST",
@@ -81,6 +82,7 @@ var GAME_MASTER = {
         y_up_movement_modifier: 2,
         x_right_movement_modifier: 2,
         y_down_movement_modifier: 2,
+        movement_smoothing: 5,
         movement_type: MOVEMENT_WRAP
     }, {
         name: "LEAF 1",

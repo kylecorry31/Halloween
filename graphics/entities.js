@@ -11,8 +11,8 @@ var BouncingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * (activationFactor - 0.5) * 2 * this.entity.size;
-        var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
+        var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
 
         if(motionX < 0){
           motionX *= entity_info.x_left_movement_modifier;
@@ -26,8 +26,8 @@ var BouncingEntity = function(x, y, entity_info) {
           motionY *= entity_info.y_down_movement_modifier;
         }
 
-        this.x_speed = this.x_speed * 0.5 + motionX;
-        this.y_speed = this.y_speed * 0.5 + motionY;
+        this.x_speed += (motionX - this.x_speed) / entity_info.movement_smoothing;
+        this.y_speed += (motionY - this.y_speed) / entity_info.movement_smoothing;
         this.entity.setSpecialActivation(activationFactor);
     };
 
@@ -66,8 +66,8 @@ var WrappingEntity = function(x, y, entity_info) {
     };
 
     this.setSpecialActivation = function(activationFactor) {
-        var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * (activationFactor - 0.5) * 2 * this.entity.size;
-        var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * (activationFactor - 0.5) * 2 * this.entity.size;
+        var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
+        var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
 
         if(motionX < 0){
           motionX *= entity_info.x_left_movement_modifier;
@@ -81,8 +81,8 @@ var WrappingEntity = function(x, y, entity_info) {
           motionY *= entity_info.y_down_movement_modifier;
         }
 
-        this.x_speed = this.x_speed * 0.5 + motionX;
-        this.y_speed = this.y_speed * 0.5 + motionY;
+        this.x_speed += (motionX - this.x_speed) / entity_info.movement_smoothing;
+        this.y_speed += (motionY - this.y_speed) / entity_info.movement_smoothing;
         this.entity.setSpecialActivation(activationFactor);
     };
 
