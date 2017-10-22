@@ -14,16 +14,16 @@ var BouncingEntity = function(x, y, entity_info) {
         var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
         var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
 
-        if(motionX < 0){
-          motionX *= entity_info.x_left_movement_modifier;
+        if (motionX < 0) {
+            motionX *= entity_info.x_left_movement_modifier;
         } else {
-          motionX *= entity_info.x_right_movement_modifier;
+            motionX *= entity_info.x_right_movement_modifier;
         }
 
-        if(motionY < 0){
-          motionY *= entity_info.y_up_movement_modifier;
+        if (motionY < 0) {
+            motionY *= entity_info.y_up_movement_modifier;
         } else {
-          motionY *= entity_info.y_down_movement_modifier;
+            motionY *= entity_info.y_down_movement_modifier;
         }
 
         this.x_speed += (motionX - this.x_speed) / entity_info.movement_smoothing;
@@ -69,16 +69,16 @@ var WrappingEntity = function(x, y, entity_info) {
         var motionX = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
         var motionY = toRange(Math.random(), 0, 1, 0.2, 1) * (Math.random() > 0.5 ? 1 : -1) * toRange(activationFactor, 0, 1, -1, 1) * this.entity.size;
 
-        if(motionX < 0){
-          motionX *= entity_info.x_left_movement_modifier;
+        if (motionX < 0) {
+            motionX *= entity_info.x_left_movement_modifier;
         } else {
-          motionX *= entity_info.x_right_movement_modifier;
+            motionX *= entity_info.x_right_movement_modifier;
         }
 
-        if(motionY < 0){
-          motionY *= entity_info.y_up_movement_modifier;
+        if (motionY < 0) {
+            motionY *= entity_info.y_up_movement_modifier;
         } else {
-          motionY *= entity_info.y_down_movement_modifier;
+            motionY *= entity_info.y_down_movement_modifier;
         }
 
         this.x_speed += (motionX - this.x_speed) / entity_info.movement_smoothing;
@@ -105,8 +105,8 @@ var Entity = function(x, y, entity_info) {
     this.currentImage = normalSprite;
     this.size = entity_info.size + 2 * (Math.random() - 0.5) * entity_info.size_std_dev;
 
-    this.width = this.size * (entity_info.aspect_ratio < 1 ? entity_info.aspect_ratio: 1);
-    this.height = this.size * (entity_info.aspect_ratio > 1 ? 1.0 / entity_info.aspect_ratio: 1);
+    this.width = this.size * (entity_info.aspect_ratio < 1 ? entity_info.aspect_ratio : 1);
+    this.height = this.size * (entity_info.aspect_ratio > 1 ? 1.0 / entity_info.aspect_ratio : 1);
 
     this.x = x;
     this.y = y;
@@ -116,16 +116,35 @@ var Entity = function(x, y, entity_info) {
     this.x += (gridSize - this.width) / 2.0;
     this.y += (gridSize - this.height) / 2.0;
 
-
+    if (entity_info.opacity_change) {
+        if (entity_info.opacity_change.inverse) {
+            this.opacity = 1;
+        } else {
+            this.opacity = 0;
+        }
+    } else {
+        this.opacity = 1;
+    }
 
     this.draw = function(ctx) {
-
-        
-
+        ctx.globalAlpha = this.opacity;
         ctx.drawImage(this.currentImage, this.x, this.y, this.width, this.height);
+        ctx.globalAlpha = 1;
     };
 
     this.setSpecialActivation = function(activationFactor) {
+
+        if (entity_info.opacity_change != undefined) {
+            if (entity_info.opacity_change.inverse) {
+                var value = Math.min(entity_info.opacity_change.max_activation, Math.max(entity_info.opacity_change.min_activation, 1.0 - activationFactor));
+                this.opacity = normalize(value, entity_info.opacity_change.min_activation, entity_info.opacity_change.max_activation);
+
+            } else {
+                var value = Math.min(entity_info.opacity_change.max_activation, Math.max(entity_info.opacity_change.min_activation, activationFactor));
+                this.opacity = normalize(value, entity_info.opacity_change.min_activation, entity_info.opacity_change.max_activation);
+            }
+        }
+
         if ((1 - activationFactor) < entity_info.special_activation_rate) {
             this.currentImage = specialSprite;
         } else {

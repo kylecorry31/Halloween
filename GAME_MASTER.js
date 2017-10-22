@@ -28,7 +28,7 @@ var GAME_MASTER = {
     entity_spawn_rate: 0.5,
     song: "audio/ghostbusters.mp3",
     song_analysis: {
-        output_bins: 10 
+        output_bins: 10
     },
     entities: [{
         name: "PUMPKIN",
@@ -74,6 +74,11 @@ var GAME_MASTER = {
         x_right_movement_modifier: 2,
         y_down_movement_modifier: 2,
         movement_smoothing: 5,
+        opacity_change: {
+            min_activation: 0.4,
+            max_activation: 0.6,
+            inverse: false
+        },
         movement_type: MOVEMENT_BOUNCE
     }, {
         name: "WRAPPING GHOST",
@@ -89,6 +94,11 @@ var GAME_MASTER = {
         x_right_movement_modifier: 2,
         y_down_movement_modifier: 2,
         movement_smoothing: 5,
+        opacity_change: {
+            min_activation: 0.4,
+            max_activation: 0.6,
+            inverse: false
+        },
         movement_type: MOVEMENT_WRAP
     }, {
         name: "LEAF 1",
